@@ -14,3 +14,5 @@ const String img_doors = "assets/images/img_doors.jpg";
 const String img_ia_house = "assets/images/img_ia_house.jpg";
 
 Size screenSize(context) => MediaQuery.of(context).size;
+
+Color primary = Color(0xFF296f5b);

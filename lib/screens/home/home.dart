@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loge_moi/constants.dart';
+import 'package:loge_moi/screens/home/postDetails.dart';
 import 'package:loge_moi/screens/widgets/circleAvatar.dart';
 import 'package:loge_moi/screens/widgets/custmTextField.dart';
 import 'package:loge_moi/screens/widgets/postContenaire.dart';
@@ -50,6 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 _searchWithFilter(context),
                 _hotelWithToutvoir(context),
                 PostContainer(
+                  onTap: () {
+                    Get.to(() => PostDetails());
+                  },
                   images: [
                     "https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939_1280.jpg",
                     "https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376_1280.jpg",
