@@ -6,8 +6,10 @@ class CustumTfd extends StatelessWidget {
   final bool isPassword;
   final String text;
   final IconData icon;
+  final TextEditingController? editingController;
   final double? height;
   final double? width;
+  final String? Function(String?)? validator;
   const CustumTfd({
     super.key,
     this.isEMail = false,
@@ -16,6 +18,8 @@ class CustumTfd extends StatelessWidget {
     required this.icon,
     this.height,
     this.width,
+    this.editingController,
+    this.validator,
   });
 
   @override
@@ -33,7 +37,9 @@ class CustumTfd extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: TextField(
+        child: TextFormField(
+          validator: validator,
+          controller: editingController,
           decoration: InputDecoration(
               icon: Icon(icon),
               hintText: text,

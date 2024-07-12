@@ -3,19 +3,21 @@ import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loge_moi/constants.dart';
+import 'package:loge_moi/models/property.dart';
 // import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
 class PostContainer extends StatelessWidget {
+  final Property property;
   final List<String> images;
   final onTap;
   PostContainer({
     super.key,
     required this.images,
     this.onTap,
+    required this.property,
   });
   Observable _controller = Get.put(Observable());
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -111,7 +113,8 @@ class PostContainer extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      "Lemba, Kabalo 47bis",
+                      property.title!,
+                      // "Lemba, Kabalo 47bis",
                       style: GoogleFonts.poppins(
                         fontSize: 22,
                         fontWeight: FontWeight.w500,
@@ -127,7 +130,8 @@ class PostContainer extends StatelessWidget {
                     SizedBox(
                       width: screenSize(context).width / 1.3,
                       child: Text(
-                        "Maison avec deux chambre salon, très espacieux avec une belle vue sur la blage",
+                        property.description!,
+                        // "Maison avec deux chambre salon, très espacieux avec une belle vue sur la blage",
                         style: GoogleFonts.poppins(
                           color: Colors.black45,
                           fontSize: 18,
@@ -143,14 +147,14 @@ class PostContainer extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      " 180\$",
+                      " ${property.price}\$",
                       style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
                     Text(
-                      " par nuit",
+                      " par mois",
                       style: GoogleFonts.poppins(
                         fontSize: 18,
                       ),

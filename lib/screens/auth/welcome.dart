@@ -73,7 +73,7 @@ class WelcomScreen extends StatelessWidget {
                       text: "Connexion",
                     ),
                     TextButton(
-                        onPressed: () => Get.to(() => const RegistreScreen()),
+                        onPressed: () => Get.to(() => RegistreScreen()),
                         child: Text(
                           "Créer un compte",
                           style: GoogleFonts.poppins(

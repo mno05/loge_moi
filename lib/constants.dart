@@ -12,7 +12,11 @@ const String img_chaise = "assets/images/img_chaise.jpg";
 const String img_house_only = "assets/images/img_house_only.jpg";
 const String img_doors = "assets/images/img_doors.jpg";
 const String img_ia_house = "assets/images/img_ia_house.jpg";
+const String profile_default = "assets/images/profile-default.webp";
 
 Size screenSize(context) => MediaQuery.of(context).size;
 
 Color primary = Color(0xFF296f5b);
+
+//images
+String profileImage = "";

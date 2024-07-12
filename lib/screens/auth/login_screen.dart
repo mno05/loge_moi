@@ -103,7 +103,7 @@ class LoginScreen extends StatelessWidget {
           const Text("Nouveau?"),
           TextButton(
               onPressed: () {
-                Get.to(() => const RegistreScreen());
+                Get.to(() => RegistreScreen());
               },
               child: const Text("Créer un compte"))
         ],
